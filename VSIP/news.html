@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/output.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo-autask_1.jpg">
+    <title>Tin tức</title>
+</head>
+
+<body>
+    <!-- Trans languagues -->
+    <section class="bg-main-blue">
+        <div class="container mx-auto">
+            <div class="w-[90%] mx-auto flex text-white justify-end gap-4 font-medium text-sm">
+                <div class="flex items-center gap-1.5 hover:bg-main-blue-hover p-2.5 cursor-pointer">
+                    <img src="./assets/images/en.png" loading="lazy" class="w-5 h-3 object-cover" alt="">
+                    <span>English</span>
+                </div>
+                <div class="flex items-center gap-1.5 hover:bg-main-blue-hover p-2.5 cursor-pointer">
+                    <img src="./assets/images/vi.png" loading="lazy" class="w-5 h-3 object-cover" alt="">
+                    <span>Tiếng Việt</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header>
+        <div class="container mx-auto">
+            <div class="w-[90%] mx-auto flex justify-between items-center py-5">
+                <a href="./index.html" class="block w-max mx-auto md:mx-0">
+                    <img src="./assets/images/logo-autask_1.jpg" loading="lazy" class="w-24 h-24" alt="">
+                </a>
+                <div class="md:flex gap-3 h-max hidden">
+                    <div class="">
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-3 text-main-blue">
+                                <path fill-rule="evenodd"
+                                    d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600 font-light">Hotline</span>
+                        </div>
+                        <a href="tel:0912232672" class="text-main-blue font-bold text-sm">0912.232.672</a>
+                    </div>
+                    <hr class="w-[1px] h-12 bg-gray-300">
+                    <div class="">
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 text-main-blue">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <span class="text-gray-600 font-light">Giờ mở cửa</span>
+                        </div>
+                        <span class="text-main-blue font-bold text-sm">08:00 - 18:00</span>
+                    </div>
+                    <hr class="w-[1px] h-12 bg-gray-300">
+                    <div class="">
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 text-main-blue">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                            </svg>
+                            <span class="text-gray-600 font-light">Liên hệ</span>
+                        </div>
+                        <a href="mailto:bdm@autask.com.vn"
+                            class="text-main-blue font-bold text-sm">bdm@autask.com.vn</a>
+                    </div>
+                    <a href=""
+                        class="bg-second-blue text-white font-bold text-sm px-5 rounded-md flex justify-center items-center hover:bg-main-blue transition-all duration-300">Yêu
+                        cầu báo giá</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="bg-main-blue">
+        <div class="container mx-auto">
+            <div
+                class="w-[90%] mx-auto flex justify-end uppercase font-bold text-[0.85rem] text-gray-300 gap-10 items-center">
+                <div class="md:flex hidden gap-5">
+                    <div class="py-6"><a class="hover:text-white transition-all duration-200" href="./index.html">Trang
+                            chủ</a></div>
+                    <div class="py-6"><a class="hover:text-white transition-all duration-200"
+                            href="./about-us.html">Giới thiệu</a></div>
+
+                    <div class="relative py-6" id="show-services">
+                        <nav class="flex items-center">
+                            <ul class="flex space-x-8">
+                                <li class="relative">
+                                    <a href="./services.html"
+                                        class="flex items-center gap-1 w-max hover:text-white transition-all duration-200">Dịch
+                                        Vụ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                        </svg>
+                                    </a>
+                                    <!-- Dropdown menu -->
+                                    <ul class="absolute hidden bg-white text-black mt-2 shadow-lg w-max -translate-x-1/2 left-1/2"
+                                        id="services-block">
+                                        <li
+                                            class="py-2 text-[0.85rem] relative after:absolute after:content-[''] after:h-[1px] after:w-10 after:bg-main-blue after:-left-10 hover:after:left-6 after:transition-all after:duration-300 overflow-hidden hover:bg-gray-100 px-2 hover:text-main-blue transition-all duration-300">
+                                            <a href="./sea-trans.html" class="block px-4 py-2">Vận Tải Đường
+                                                Biển</a>
+                                        </li>
+                                        <li
+                                            class="py-2 text-[0.85rem] relative after:absolute after:content-[''] after:h-[1px] after:w-10 after:bg-main-blue after:-left-10 hover:after:left-6 after:transition-all after:duration-300 overflow-hidden hover:bg-gray-100 px-2 hover:text-main-blue transition-all duration-300">
+                                            <a href="./road-trans.html" class="block px-4 py-2">Vận Tải Đường
+                                                Bộ</a>
+                                        </li>
+                                        <li
+                                            class="py-2 text-[0.85rem] relative after:absolute after:content-[''] after:h-[1px] after:w-10 after:bg-main-blue after:-left-10 hover:after:left-6 after:transition-all after:duration-300 overflow-hidden hover:bg-gray-100 px-2 hover:text-main-blue transition-all duration-300">
+                                            <a href="./airport.html" class="block px-4 py-2">Vận Tải Hàng
+                                                Không</a>
+                                        </li>
+                                        <li
+                                            class="py-2 text-[0.85rem] relative after:absolute after:content-[''] after:h-[1px] after:w-10 after:bg-main-blue after:-left-10 hover:after:left-6 after:transition-all after:duration-300 overflow-hidden hover:bg-gray-100 px-2 hover:text-main-blue transition-all duration-300">
+                                            <a href="./customs-procedures.html" class="block px-4 py-2">Thủ Tục Hải
+                                                Quan</a>
+                                        </li>
+                                        <li
+                                            class="py-2 text-[0.85rem] relative after:absolute after:content-[''] after:h-[1px] after:w-10 after:bg-main-blue after:-left-10 hover:after:left-6 after:transition-all after:duration-300 overflow-hidden hover:bg-gray-100 px-2 hover:text-main-blue transition-all duration-300">
+                                            <a href="./import-export.html" class="block px-4 py-2">Xuất Nhập
+                                                Khẩu</a>
+                                        </li>
+                                        <li
+                                            class="py-2 text-[0.85rem] relative after:absolute after:content-[''] after:h-[1px] after:w-10 after:bg-main-blue after:-left-10 hover:after:left-6 after:transition-all after:duration-300 overflow-hidden hover:bg-gray-100 px-2 hover:text-main-blue transition-all duration-300">
+                                            <a href="./warehouse.html" class="block px-4 py-2">Kho Bãi</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                    <div class="py-6"><a class="text-white transition-all duration-200" href="./news.html">Tin
+                            tức</a></div>
+                    <div class="py-6"><a class="hover:text-white transition-all duration-200"
+                            href="./about-us.html">Liên hệ</a></div>
+                </div>
+                <div class="md:flex hidden gap-2.5">
+                    <a href="" class="bg-gray-400 hover:bg-white transition-all duration-300 p-2 block"><svg
+                            class="w-4 h-4 text-main-blue" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 320 512">
+                            <path
+                                d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                        </svg></a>
+                    <a href="" class="bg-gray-400 hover:bg-white transition-all duration-300 p-2 block">
+                        <img src="./assets/images/Logo-Zalo-Arc.webp" loading="lazy" class="w-5 h-5 grayscale" alt="">
+                    </a>
+                    <a href="" class="bg-gray-400 hover:bg-white transition-all duration-300 p-2 block">
+                        <svg class="w-5 h-5 text-main-blue" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="md:hidden block py-2 w-max" id="show-nav-responsive">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-10 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nav responsive block -->
+    <section>
+        <div class="w-[300px] fixed top-0 right-0 h-full bg-main-blue z-50 px-5 py-10 translate-x-80 transition-all duration-700"
+            id="wrap-nav-responsive">
+            <p class="flex justify-end"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="size-10 text-white" id="close-nav-responsive">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </p>
+            <div class="flex flex-col divide-y divide-solid uppercase text-white font-bold mt-4">
+                <div class="py-4"><a href="./index.html">Trang chủ</a></div>
+                <div class="py-4"><a href="./about-us.html">Giới thiệu</a></div>
+                <div class="py-4">
+                    <div class="flex justify-between items-center">
+                        <a href="./services.html">Dịch vụ</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6" id="show-services-responsive">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </div>
+
+                    <ul class="text-white overflow-hidden transition-all duration-300"
+                        style="height: 0px; margin-top: 0px;" id="services-block-responsive">
+                        <li class="py-2 text-[0.85rem] px-2">
+                            <a href="./sea-trans.html" class="block px-4 py-2">Vận Tải Đường
+                                Biển</a>
+                        </li>
+                        <li class="py-2 text-[0.85rem] px-2">
+                            <a href="./road-trans.html" class="block px-4 py-2">Vận Tải Đường
+                                Bộ</a>
+                        </li>
+                        <li class="py-2 text-[0.85rem] px-2">
+                            <a href="./airport.html" class="block px-4 py-2">Vận Tải Hàng
+                                Không</a>
+                        </li>
+                        <li class="py-2 text-[0.85rem] px-2">
+                            <a href="./customs-procedures.html" class="block px-4 py-2">Thủ Tục Hải
+                                Quan</a>
+                        </li>
+                        <li class="py-2 text-[0.85rem] px-2">
+                            <a href="./import-export.html" class="block px-4 py-2">Xuất Nhập
+                                Khẩu</a>
+                        </li>
+                        <li class="py-2 text-[0.85rem] px-2">
+                            <a href="./warehouse.html" class="block px-4 py-2">Kho Bãi</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="py-4"><a href="./news.html">Tin tức</a></div>
+                <div class="py-4"><a href="./contact.html">Liên hệ</a></div>
+            </div>
+        </div>
+        <div class="w-screen h-screen fixed bg-black opacity-45 top-0 left-0 z-40 hidden" id="bg-nav-responsive"></div>
+    </section>
+
+    <!-- Title Page -->
+    <section class="bg-background-gray">
+        <div class="container mx-auto">
+            <div class="w-[90%] mx-auto text-main-blue py-10">
+                <h1 class="text-4xl font-bold uppercase">Tin tức</h1>
+                <a href="./index.html" class="font-bold mt-7 block">Trang Chủ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page's Content} -->
+    <section>
+        <div class="container mx-auto py-20">
+            <div class="w-[90%] mx-auto flex flex-col lg:flex-row gap-10">
+                <div class="basis-2/3 flex flex-col gap-10">
+                    <div class="flex flex-col md:flex-row bg-second-gray">
+                        <div class="basis-[40%]">
+                            <img src="./assets/images/web0_0.jpg" class="w-full h-full object-cover"
+                                loading="lazy" alt="">
+                        </div>
+                        <div class="basis-[60%] flex flex-col gap-5 py-5 px-10">
+                            <h2 class="text-2xl font-medium line-clamp-2">Lễ kỉ niệm 4 năm thành lập Autask Logistics</h2>
+                            <p class="text-sm text-gray-600 line-clamp-5">Ngày 29/9/2022 AUTASK Logistics tổ chức lễ kỉ niệm 4 năm thành lập công ty với sự hiện diện của hơn 60 vị khách mời đến từ đại diện 20 hãng tàu, hệ thống 3 cảng  tại Hải phòng và chục công ty vận tải và khách hàng đối tác của công ty.</p>
+                            <a href="./child-post.html" class="font-bold text-sm uppercase text-main-blue">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row bg-second-gray">
+                        <div class="basis-[40%]">
+                            <img src="./assets/images/2020_04_29_3a9696c5f386dc87e0b1797c6c730579-2.jpg"
+                                class="w-full h-full object-cover" loading="lazy" alt="">
+                        </div>
+                        <div class="basis-[60%] flex flex-col gap-5 py-5 px-10">
+                            <h2 class="text-2xl font-medium line-clamp-2">Tuyển dụng nhân viên sales logistics</h2>
+                            <p class="text-sm text-gray-600 line-clamp-5">Tuyển dụng vị trí sales logistics</p>
+                            <a href="./child-post.html" class="font-bold text-sm uppercase text-main-blue">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row bg-second-gray">
+                        <div class="basis-[40%]">
+                            <img src="./assets/images/autask-3.jpeg" class="w-full h-full object-cover"
+                                loading="lazy" alt="">
+                        </div>
+                        <div class="basis-[60%] flex flex-col gap-5 py-5 px-10">
+                            <h2 class="text-2xl font-medium line-clamp-2">LƯU Ý VẬN CHUYỂN BẰNG ĐƯỜNG HÀNG KHÔNG</h2>
+                            <p class="text-sm text-gray-600 line-clamp-5">Lưu ý vận chuyển bằng đường hàng không: hàng không là hình thức vận chuyển ra đời muộn nhưng mang đến nhiều ưu điểm vượt trội về độ nhanh chóng và an toàn bậc nhất. Sau đây là 4 lưu ý khi vận chuyển hàng hóa bằng đường hàng không nhất định các bạn cần nắm được.Hàng hóa bắt buộc phải có giấy tờ hợp</p>
+                            <a href="./child-post.html" class="font-bold text-sm uppercase text-main-blue">Xem
+                                thêm</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row bg-second-gray">
+                        <div class="basis-[40%]">
+                            <img src="./assets/images/autask-2.jpeg" class="w-full h-full object-cover"
+                                loading="lazy" alt="">
+                        </div>
+                        <div class="basis-[60%] flex flex-col gap-5 py-5 px-10">
+                            <h2 class="text-2xl font-medium line-clamp-2">CÁCH TĂNG LỢI NHUẬN DOANH NGHIỆP HIỆU QUẢ NHẤT: GIẢM CHI PHÍ LOGISTICSộ</h2>
+                            <p class="text-sm text-gray-600 line-clamp-5">Cách tăng lợi nhuận doanh nghiệp hiệu quả nhất: Giảm chi phí logistics Hoạt động quản trị chuỗi cung ứng (logistics) là một trong những ngành dịch vụ quan trọng trong thương mại, nhưng lĩnh vực này của Hà Nội nói riêng và Việt Nam nói chung còn rất yếu và thiếu đồng bộ. Doanh nghiệp tốn quá nhiều</p>
+                            <a href="./child-post.html" class="font-bold text-sm uppercase text-main-blue">Xem thêm</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row bg-second-gray">
+                        <div class="basis-[40%]">
+                            <img src="./assets/images/autask-1.jpeg" class="w-full h-full object-cover"
+                                loading="lazy" alt="">
+                        </div>
+                        <div class="basis-[60%] flex flex-col gap-5 py-5 px-10">
+                            <h2 class="text-2xl font-medium line-clamp-2">Ô TÔ NHẬP KHẨU KHÔNG CHẠY TRÊN ĐƯỜNG: HẢI QUAN BỐI RỐI!</h2>
+                            <p class="text-sm text-gray-600 line-clamp-5">3 chiếc ô tô được nhập khẩu nhằm mục đích nghiên cứu của Công ty Toyota Việt Nam dù được Cục Đăng kiểm cấp giấy chứng nhận đủ điều kiện nhập khẩu song về đến cảng Hải Phòng thì được thông báo là không đủ giấy phép thông quan. Trong công văn mới đây gửi tới cơ quan chức năng, Công ty Toyota Việt Nam</p>
+                            <a href="./child-post.html" class="font-bold text-sm uppercase text-main-blue">Xem
+                                thêm</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row bg-second-gray">
+                        <div class="basis-[40%]">
+                            <img src="./assets/images/background-15_0.jpg" class="w-full h-full object-cover"
+                                loading="lazy" alt="">
+                        </div>
+                        <div class="basis-[60%] flex flex-col gap-5 py-5 px-10">
+                            <h2 class="text-2xl font-medium line-clamp-2">Dịch vụ cho Thuê kho</h2>
+                            <p class="text-sm text-gray-600 line-clamp-5">Công ty cổ phần Autask với mục tiêu cung cấp các dịch vụ
+                                logistics cho tất cả các khu vực khách hàng, chúng tôi đã xây dựng được các cơ sở kho
+                                bãi hiện đại và đang tiến hành một số dự án đầu tư kho bãi mới nhằm cung ứng dịch vụ
+                                tiện ích nhất cho khách hàng và đối tác. Chúng tôi xây dựng hệ thống</p>
+                            <a href="./warehouse.html" class="font-bold text-sm uppercase text-main-blue">Xem thêm</a>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-3 text-main-blue">
+                        <button class="py-2 px-4 transpage font-bold" type="button">1</button>
+                        <button class="py-2 px-4 transpage border" type="button">2</button>
+                        <button class="py-2 px-4 transpage border" type="button">3</button>
+                        <button class="py-2 px-4 transpage border" type="button">4</button>
+                        <button class="py-2 px-4 transpage border" type="button">5</button>
+                        <button class="py-2 px-4 border" type="button">sau</button>
+                        <button class="py-2 px-4 border" type="button">cuối</button>
+                    </div>
+                </div>
+                <div class="basis-1/3 flex flex-col gap-7">
+                    <div class="flex">
+                        <input type="text"
+                            class="bg-second-gray px-3 text-xs font-medium block focus:outline-none w-full"
+                            placeholder="Nhập từ khóa">
+                        <button class="bg-main-blue font-bold text-white px-4 py-3 min-w-max">Tìm kiếm</button>
+                    </div>
+                    <hr class="w-full h-[1px] bg-gray-500">
+                    <div class="uppercase">
+                        <h2 class="text-xl font-medium">DỊCH VỤ</h2>
+                        <ul class="text-sm font-semibold flex flex-col gap-3 mt-4">
+                            <li><a href="./sea-trans.html" class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    <span>Vận tải đường biển</span>
+                                </a></li>
+                            <li><a class="flex items-center gap-2" href="./airport.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    <span>Vận tải hàng không</span>
+                                </a></li>
+                            <li><a class="flex items-center gap-2" href="./customs-procedures.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    <span>Dịch vụ khai quan</span>
+                            <li><a class="flex items-center gap-2" href="./road-trans.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    <span>Vận tải đường bộ</span>
+                                </a></li>
+                            <li><a class="flex items-center gap-2" href="./import-export.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    <span>Xuất nhập khẩu</span>
+                                </a></li>
+                            <li><a class="flex items-center gap-2" href="./warehouse.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                    <span>Dịch vụ cho Thuê kho</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <hr class="w-full h-[1px] bg-gray-500">
+                    <div class="uppercase font-medium">
+                        <h2 class="text-xl">Tin nổi bật</h2>
+                        <div class="flex flex-col gap-5 mt-5">
+                            <a href="./child-news.html" class="flex gap-3">
+                                <img src="./assets/images/m-and-a_0.jpg" loading="lazy" class="min-w-28 h-20" alt="">
+                                <span class="line-clamp-3">Giá trị M&A tại Việt Nam có thể đạt gần 7,6 tỷ USD trong</span>
+                            </a>
+                            <a href="./child-news.html" class="flex gap-3">
+                                <img src="./assets/images/7_0.jpg" loading="lazy" class="w-28 h-20" alt="">
+                                <span>Phát triển nguồn nhân lực ngành Logistics</span>
+                            </a>
+                            <a href="./child-news.html" class="flex gap-3">
+                                <img src="./assets/images/ttxvn_cang_bien_0.jpg" loading="lazy" class="w-28 h-20" alt="">
+                                <span>Tổng quan về ưu nhược điểm của phương thức vận</span>
+                            </a>
+                            <a href="./child-news.html" class="flex gap-3">
+                                <img src="./assets/images/1.jpg" loading="lazy" class="w-28 h-20" alt="">
+                                <span>VẬN CHUYỂN HÀNG HOÁ DỄ VỠ AN TOÀN HIỆU QUẢ</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-main-blue">
+        <div class="container mx-auto">
+            <div class="w-[90%] mx-auto grid lg:grid-cols-4 xs:grid-cols-2 text-white py-10 gap-5">
+                <div class="flex flex-col gap-4">
+                    <img src="./assets/images/logo-autask.png" loading="lazy" class="w-24 h-24" alt="">
+                    <p class="text-sm text-justify">Công ty Autask Logistics là một trong những nhà cung cấp dịch vụ vận
+                        tải đường bộ, đường biển, đường hàng không chuyên nghiệp với hệ thống kho bãi, xe vận tải, khai
+                        thuê hải quan. Chúng tôi cam kết xử lý hầu hết các yêu cầu dịch vụ mang lại giá trị và sự hài
+                        lòng tới Quý khách.</p>
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="font-semibold text-xl">LIÊN KẾT NHANH</h3>
+                    <ul class="divide-y divide-dashed mt-5">
+                        <li><a href="./index.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Trang chủ</span>
+                            </a></li>
+                        <li><a href="./about-us.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Giới Thiệu</span>
+                            </a></li>
+                        <li><a href="./services.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Dịch vụ</span>
+                            </a></li>
+                        <li><a href="./news.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Tin tức</span>
+                            </a></li>
+                        <li><a href="./contact.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Liên hệ</span>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="font-semibold text-xl uppercase">DỊCH VỤ</h3>
+                    <ul class="divide-y divide-dashed mt-5">
+                        <li><a href="./sea-trans.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Vận tải đường biển</span>
+                            </a></li>
+                        <li><a href="./road-trans.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Vận tải đường bộ</span>
+                            </a></li>
+                        <li><a href="./airport.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Vận tải hàng không</span>
+                            </a></li>
+                        <li><a href="./customs-procedures.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Dịch vụ khai quan</span>
+                            </a></li>
+                        <li><a href="./import-export.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Xuất nhập khẩu</span>
+                            </a></li>
+                        <li><a href="./warehouse.html" class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]">Dịch vụ cho Thuê kho</span>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col">
+                    <h3 class="font-semibold text-xl">Thông tin liên hệ</h3>
+                    <ul class="divide-y divide-dashed">
+                        <li>
+                            <p class="flex gap-1.5 items-center py-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                                <span class="font-semibold uppercase text-[13px]"><strong>Địa chỉ:</strong> Phòng
+                                    733+734, Tầng 7, Toà nhà Thành Đạt 1, Số 3 Lê Thánh Tông, Phường Máy Tơ, Ngô Quyền,
+                                    Hải Phòng, Việt Nam</span>
+                            </p>
+                        </li>
+                        <li class="flex items-center gap-1.5 py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+                            <span class="flex gap-1"><strong>Hotline:</strong> <a
+                                    href="tel:0904233104">0904233104</a></span>
+                        </li>
+                        <li class="flex items-center gap-1.5 py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+                            <span class="flex gap-1"><strong>Email:</strong> <a
+                                    href="mailto: bdm@autask.com.vn">bdm@autask.com.vn</a></span>
+                        </li>
+                        <li class="flex items-center gap-1.5 py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+                            <span class="flex gap-1"><strong>Website:</strong> <a
+                                    href="autask.com.vn">autask.com.vn</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/transpage.js"></script>
+</body>
+
+</html>
