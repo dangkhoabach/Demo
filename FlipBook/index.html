@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FlipBook | dangkhoabach</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/turn.min.js"></script>
+	<script type="text/javascript" src="js/turn.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!-- PDF Show -->
+	<div id="magazine"></div>
+
+	<!-- Script -->
+	<script>
+		const magazine = document.getElementById("magazine");
+
+		for (let i = 0; i < 122; i++) {
+			const div = document.createElement("div");
+			div.style.backgroundImage = `url(pages/${i}.jpg)`;
+			magazine.appendChild(div);
+		}
+
+		$(window).ready(function () {
+			$('#magazine').turn({
+				display: 'double',
+				acceleration: true,
+				gradients: !$.isTouch,
+				elevation: 50,
+				when: {
+					turned: function (e, page) {
+					}
+				}
+			});
+		});
+
+
+		$(window).bind('keydown', function (e) {
+
+			if (e.keyCode == 37)
+				$('#magazine').turn('previous');
+			else if (e.keyCode == 39)
+				$('#magazine').turn('next');
+
+		});
+	</script>
+
+</body>
+
+</html>
