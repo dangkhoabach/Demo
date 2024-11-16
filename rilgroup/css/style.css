@@ -592,7 +592,6 @@ blockquote cite:before {
     padding-bottom: 0;
     height: 90px;
     border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .navbar-toggler-icon {
